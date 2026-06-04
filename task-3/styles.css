@@ -1,0 +1,96 @@
+:root {
+    --gradient-bg: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+    --card-surface: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.07);
+    --text-heading: #FFFFFF;
+    --text-body: #94A3B8;
+    --accent: #818CF8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--gradient-bg);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: var(--card-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 40px 100px -20px rgba(0,0,0,0.7);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.avatar-placeholder {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.profile-info h3 { color: var(--text-heading); font-size: 1.25rem; font-weight: 700; }
+.profile-info p { color: var(--accent); font-size: 0.85rem; font-weight: 500; margin-top: 0.15rem; }
+
+.profile-bio {
+    color: var(--text-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-heading);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+}
+
+.btn-action {
+    display: block;
+    text-align: center;
+    background: #FFFFFF;
+    color: #0F172A;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-action:hover {
+    background: #E2E8F0;
+    transform: translateY(-1px);
+}
