@@ -1,0 +1,81 @@
+:root {
+    --bg-dark: #0B0F19;
+    --card-bg: #111827;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-main: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --brand-blue: #3B82F6;
+    --success: #10B981;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.dashboard-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.meta-text {
+    color: var(--brand-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h2 { color: var(--text-main); font-size: 1.35rem; margin-top: 0.25rem; }
+
+.status-indicator {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 100px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.metric-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.label { color: var(--text-muted); font-size: 0.85rem; display: block; }
+.value { color: var(--text-main); font-size: 1.75rem; font-weight: 700; margin: 0.5rem 0; display: block; }
+.trend { font-size: 0.75rem; font-weight: 500; }
+.trend.positive { color: var(--success); }
+.trend.stable { color: var(--text-muted); }
+
+.progress-section { margin-top: 1.5rem; }
+.progress-labels { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
+.progress-bar-container { background: rgba(255, 255, 255, 0.05); height: 8px; border-radius: 100px; overflow: hidden; }
+.progress-bar-fill { background: linear-gradient(90deg, #3B82F6, #60A5FA); width: 84%; height: 100%; border-radius: 100px; }
