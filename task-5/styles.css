@@ -1,0 +1,26 @@
+:root {
+    --space-black: #05050A;
+    --box-bg: #0F0F1A;
+    --glow-purple: #A855F7;
+    --border-color: rgba(168, 85, 247, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--space-black); font-family: 'Plus Jakarta Sans', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; color: #E4E4E7; padding: 1rem; }
+
+.ai-container { width: 100%; max-width: 520px; display: flex; flex-direction: column; gap: 1rem; }
+.ai-prompt-box, .ai-response-box { background: var(--box-bg); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+
+.ai-prompt-box { border-left: 3px solid var(--glow-purple); }
+.prompt-header { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; }
+.ai-sparkle { color: var(--glow-purple); text-transform: uppercase; letter-spacing: 0.05em; }
+.token-count { color: #71717A; }
+
+.prompt-input { width: 100%; background: transparent; border: none; color: #D4D4D8; font-family: inherit; font-size: 0.95rem; resize: none; outline: none; height: 50px; line-height: 1.5; }
+
+.ai-response-box { border-left: 3px solid #06B6D4; position: relative; overflow: hidden; }
+.response-status { font-size: 0.8rem; color: #06B6D4; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.response-stream { font-family: monospace; font-size: 0.9rem; line-height: 1.7; color: #A1A1AA; }
+.response-stream p { margin-bottom: 0.5rem; }
+.highlight { color: #06B6D4; font-weight: bold; }
